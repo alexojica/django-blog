@@ -40,6 +40,7 @@ def add_post(request):
         form = PostForm()
     return render(request, 'hello/add_post.html', {'form': form})
 
+
 @csrf_exempt
 def generate_content(request):
     if request.method == 'POST':
