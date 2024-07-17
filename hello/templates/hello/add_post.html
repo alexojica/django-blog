@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Add New Post</h1>
-    <form method="post" class="form">
+    <form method="post" class="form" id="postForm">
         {% csrf_token %}
         <div class="form-group">
             {{ form.title.label_tag }}
@@ -12,6 +12,32 @@
             {{ form.content.label_tag }}
             {{ form.content }}
         </div>
+        <button type="button" class="btn btn-secondary" onclick="generateContent()">Generate Content</button>
         <button type="submit" class="btn btn-primary">Add Post</button>
     </form>
+
+    <script>
+        function generateContent() {
+            const content = document.getElementById('id_content').value;
+            fetch('/hello/generate_content/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ 'content': content })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.generated_text) {
+                    document.getElementById('id_content').value = data.generated_text;
+                } else {
+                    alert('Failed to generate content');
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error);
+            });
+        }
+    </script>
 {% endblock %}
