@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello',
+    # 'hello',
+    'hello.apps.HelloConfig',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,20 @@ LOGIN_REDIRECT_URL = 'post_list'
 
 # Add this line to set the logout redirect URL
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For development use the console backend
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'

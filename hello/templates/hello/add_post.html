@@ -2,42 +2,42 @@
 
 {% block content %}
     <h1>Add New Post</h1>
-    <form method="post" class="form" id="postForm">
+    <form method="post">
         {% csrf_token %}
-        <div class="form-group">
-            {{ form.title.label_tag }}
-            {{ form.title }}
-        </div>
-        <div class="form-group">
-            {{ form.content.label_tag }}
-            {{ form.content }}
-        </div>
-        <button type="button" class="btn btn-secondary" onclick="generateContent()">Generate Content</button>
+        {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Add Post</button>
+        <button type="button" class="btn btn-secondary" id="generate-content-button">Generate Content</button>
     </form>
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
 
     <script>
-        function generateContent() {
-            const content = document.getElementById('id_content').value;
-            fetch('/hello/generate_content/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': '{{ csrf_token }}'
-                },
-                body: JSON.stringify({ 'content': content })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.generated_text) {
-                    document.getElementById('id_content').value = data.generated_text;
-                } else {
-                    alert('Failed to generate content');
-                }
-            })
-            .catch(error => {
-                alert('Error: ' + error);
-            });
-        }
+    document.getElementById('generate-content-button').addEventListener('click', function() {
+        const contentField = document.getElementById('id_content');
+        const mainIdea = contentField.value || 'random story be creative';
+        const prompt = `Give me a short story (5 sentences max) about the following idea/summary: ${mainIdea}`;
+
+        fetch('{% url "generate_content" %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({ text: prompt })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.generated_text) {
+                contentField.value = data.generated_text;
+            } else {
+                alert('Failed to generate content');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to generate content');
+        });
+    });
     </script>
 {% endblock %}

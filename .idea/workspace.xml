@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b9bead0-b6df-4208-9676-bf1acfe4cd1b" name="Changes" comment="implement text generation">
+    <list default="true" id="8b9bead0-b6df-4208-9676-bf1acfe4cd1b" name="Changes" comment="minor modifications">
       <change beforePath="$PROJECT_DIR$/.idea/djangoApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangoApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/hello/add_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/hello/templates/hello/add_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/hello/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/hello/templates/hello/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/templates/hello/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/hello/templates/hello/post_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +51,26 @@
       </list>
     </option>
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "alexojica"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alexojica&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/alexojica/django-blog.git",
-    "accountId": "8011208d-b6d5-4e5c-84cc-9123b5ad388a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alexojica/django-blog.git&quot;,
+    &quot;accountId&quot;: &quot;8011208d-b6d5-4e5c-84cc-9123b5ad388a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -65,24 +80,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hello" />
@@ -108,7 +123,8 @@
       <workItem from="1721041821731" duration="3423000" />
       <workItem from="1721118481613" duration="2830000" />
       <workItem from="1721121537336" duration="652000" />
-      <workItem from="1721206643542" duration="9043000" />
+      <workItem from="1721206643542" duration="18735000" />
+      <workItem from="1721583920581" duration="757000" />
     </task>
     <task id="LOCAL-00001" summary="working blog app">
       <option name="closed" value="true" />
@@ -142,7 +158,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721216338978</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="minor modifications">
+      <option name="closed" value="true" />
+      <created>1721223365551</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721223365551</updated>
+    </task>
+    <task id="LOCAL-00006" summary="minor modifications">
+      <option name="closed" value="true" />
+      <created>1721223459953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721223459953</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +185,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -162,6 +206,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working blog app" />
     <MESSAGE value="implement text generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement text generation" />
+    <MESSAGE value="minor modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor modifications" />
   </component>
 </project>

@@ -26,6 +26,7 @@
     <option name="namespacePackageFolders">
       <list>
         <option value="$MODULE_DIR$/tests" />
+        <option value="$MODULE_DIR$/hello/templatetags" />
       </list>
     </option>
   </component>
