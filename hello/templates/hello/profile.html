@@ -1,0 +1,9 @@
+{% extends 'hello/base.html' %}
+
+{% block content %}
+    <h1>{{ profile.user.username }}'s Profile</h1>
+    <p>{{ profile.bio }}</p>
+    {% if user == profile.user %}
+        <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
+    {% endif %}
+{% endblock %}

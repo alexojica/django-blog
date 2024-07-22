@@ -1,0 +1,30 @@
+<button type="button" class="btn btn-secondary" id="generate-content-button">Generate Content</button>
+
+<script>
+document.getElementById('generate-content-button').addEventListener('click', function() {
+    const contentField = document.getElementById('id_content');
+    const mainIdea = contentField.value || 'random story be creative';
+    const prompt = `Give me a short story (5 sentences max) about the following idea/summary: ${mainIdea}`;
+    
+    fetch('{% url "generate_content" %}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: JSON.stringify({ text: prompt })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.generated_text) {
+            contentField.value = data.generated_text;
+        } else {
+            alert('Failed to generate content');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to generate content');
+    });
+});
+</script>
